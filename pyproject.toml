@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "handgesture"
+version = "0.1.0"
+description = "Webcam face and hand tracker with OpenCV and MediaPipe"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "opencv-python>=4.9.0",
+    "mediapipe>=0.10.0",
+]
+
+[project.scripts]
+handgesture = "handgesture.app:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
